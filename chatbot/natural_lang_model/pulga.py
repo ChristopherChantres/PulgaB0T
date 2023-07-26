@@ -1,4 +1,4 @@
-from dataset import pairs as dataset
+from .dataset import pairs as dataset
 import nltk
 from nltk.chat.util import Chat, reflections
 import os

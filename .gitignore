@@ -1,0 +1,42 @@
+# Ignore Python bytecodes, cache files, and other generated files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+*.pyz/
+*.pyw/
+*.egg-info/
+dist/
+build/
+.env
+
+# Ignore local development settings and sensitive information
+*.env
+*.sqlite3
+local_settings.py
+
+# Ignore static and media files (if they are served by a web server)
+/static/
+/media/
+
+# Ignore user-specific files
+*.DS_Store
+Thumbs.db
+
+# Ignore virtual environment
+venv/
+env/
+*.venv/
+env.bak/
+
+# Ignore IDE and editor specific files
+.vscode/
+.idea/
+*.sublime*
+*.pyc
+*.pyo
+*.swo
+*.swp
+*~

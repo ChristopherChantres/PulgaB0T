@@ -7,6 +7,13 @@
     <title>Home</title>
   </head>
   <body>
-    hola
+    <h1>{{ user_input }}</h1>
+    <form method='post'>
+      {% csrf_token %}
+      <label for="user_field_input">
+        <input type="text" placeholder="Send a message" name="user_field_input">
+        <button type="submit">></button>
+      </label>
+    </form>
   </body>
 </html>

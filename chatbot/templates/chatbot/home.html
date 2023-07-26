@@ -7,7 +7,19 @@
     <title>Home</title>
   </head>
   <body>
-    <p>{{ pulga_response }}</p>
+    <h2>PulgaB0T</h2>
+    <p>Type "help" to understand better this chatbot.</p>
+    <hr>
+    {% if user == 'help' %}
+      <p>PulgaB0T: </p>
+      <p>- PulgaB0T is a chatbot that uses nltk in the background <br>- Type for example "Tell me a joke" <br>- Ask for advices "Give me an advice"</p>
+    {% else %}
+    <p>PulgaB0T: {{ pulga_response }}</p>
+    {% endif %}
+
+    {% if user %}
+      <p>You: {{ user }}</p>
+    {% endif %}
     <form method='post'>
       {% csrf_token %}
       <label for="user_field_input">

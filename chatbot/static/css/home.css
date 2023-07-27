@@ -33,3 +33,58 @@ body {
 .header-description span {
   font-weight: bold;
 }
+
+/* ----------------------- */
+
+.chat-container {
+  width: 300px;
+  border-radius: 10px;
+  background-color: #263358c2;
+  padding: 15px;
+  box-shadow: 0 10px 7px rgba(0, 0, 0, 0.47);
+}
+
+.chat-container__messages {
+
+}
+
+.chatbot {
+  border: none;
+  border-radius: 3px;
+  background-color: #00ad44;
+  padding: 3px;
+}
+
+.chatbot-response {
+  padding-left: 5px;
+  letter-spacing: .6px;
+}
+
+.user-input-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-input {
+  font-family: 'Handjet', cursive;
+  letter-spacing: 1px;
+  padding: 10px 40px 10px 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  /* font-size: 16px; */
+  background-color: #2e3e6bc2;
+  color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.47);
+}
+
+.form-submit {
+  width: 40px;
+  background-color: #00ff64;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #043045;
+  cursor: pointer;
+}

@@ -34,6 +34,10 @@ body {
   font-weight: bold;
 }
 
+hr {
+  color: #00ff64;
+}
+
 /* ----------------------- */
 
 .chat-container {

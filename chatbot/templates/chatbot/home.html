@@ -10,36 +10,38 @@
   </head>
   <body>
     <div class="big-container">
-      <header>
-        <h2 class="header-title">PulgaB0T</h2>
-        <p class="header-description">Type <span>"help"</span> to understand better this chatbot.</p>
-        <hr>
-      </header>
-      <div class="chat-container">
-        <div class="chat-container__messages">
-          {% if user == 'help' %}
-            <p>PulgaB0T: </p>
-            <p>- PulgaB0T is a chatbot that uses nltk in the background <br>- Type for example "Tell me a joke" <br>- Ask for advices "Give me an advice"</p>
-            <hr>
-          {% else %}
-            <p><span class="chatbot">PulgaB0T:</span><span class="chatbot-response">{{ pulga_response }}</span></p>
-          {% endif %}
+      <main>
+        <header>
+          <h2 class="header-title">PulgaB0T</h2>
+          <p class="header-description">Type <span>"help"</span> to understand better this chatbot.</p>
+          <hr>
+        </header>
+        <div class="chat-container">
+          <div class="chat-container__messages">
+            {% if user == 'help' %}
+              <p>PulgaB0T: </p>
+              <p>- PulgaB0T is a chatbot that uses nltk in the background <br>- Type for example "Tell me a joke" <br>- Ask for advices "Give me an advice"</p>
+              <hr>
+            {% else %}
+              <p><span class="chatbot">PulgaB0T:</span><span class="chatbot-response">{{ pulga_response }}</span></p>
+            {% endif %}
+          </div>
+  
+      
+          {% comment %} {% if user %}
+            {% for message in all_messages %}
+              <p>You: {{ message.message }} <small>{{ message.sent_at|time:"g:i" }}</small></p>
+            {% endfor %}
+          {% endif %} {% endcomment %}
+          <form method='post'>
+            {% csrf_token %}
+            <label for="user_field_input" class="user-input-container">
+              <input type="text" placeholder="Send a message" name="user_field_input" class="form-input">
+              <button type="submit" class="form-submit">></button>
+            </label>
+          </form>
         </div>
-
-    
-        {% comment %} {% if user %}
-          {% for message in all_messages %}
-            <p>You: {{ message.message }} <small>{{ message.sent_at|time:"g:i" }}</small></p>
-          {% endfor %}
-        {% endif %} {% endcomment %}
-        <form method='post'>
-          {% csrf_token %}
-          <label for="user_field_input" class="user-input-container">
-            <input type="text" placeholder="Send a message" name="user_field_input" class="form-input">
-            <button type="submit" class="form-submit">></button>
-          </label>
-        </form>
-      </div>
+      </main>
     </div>
     
   </body>

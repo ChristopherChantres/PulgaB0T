@@ -7,19 +7,25 @@
     <title>Home</title>
   </head>
   <body>
-    <h2>PulgaB0T</h2>
-    <p>Type "help" to understand better this chatbot.</p>
-    <hr>
-    {% if user == 'help' %}
-      <p>PulgaB0T: </p>
-      <p>- PulgaB0T is a chatbot that uses nltk in the background <br>- Type for example "Tell me a joke" <br>- Ask for advices "Give me an advice"</p>
-    {% else %}
-    <p>PulgaB0T: {{ pulga_response }}</p>
-    {% endif %}
-
-    {% if user %}
-      <p>You: {{ user }}</p>
-    {% endif %}
+    <div>
+      <h2>PulgaB0T</h2>
+      <p>Type "help" to understand better this chatbot.</p>
+      <hr>
+      {% if user == 'help' %}
+        <p>PulgaB0T: </p>
+        <p>- PulgaB0T is a chatbot that uses nltk in the background <br>- Type for example "Tell me a joke" <br>- Ask for advices "Give me an advice"</p>
+        <hr>
+      {% else %}
+      <p>PulgaB0T: {{ pulga_response }}</p>
+      <hr>
+      {% endif %}
+  
+      {% if user %}
+        {% for message in all_messages %}
+          <p>You: {{ message.message }} <small>{{ message.sent_at|time:"g:i" }}</small></p>
+        {% endfor %}
+      {% endif %}
+    </div>
     <form method='post'>
       {% csrf_token %}
       <label for="user_field_input">

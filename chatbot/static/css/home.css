@@ -1,3 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500;800&family=Neucha&display=swap');
+
+:root {
+  --font-color: white;
+}
+
 body {
-  background-color: aqua;
+  background-color: rgb(32, 39, 50);
+  font-family: 'Handjet', cursive;
+  /* font-family: 'Neucha', cursive; */
+  margin: 0;
+  padding: 0;
+  color: var(--font-color);
+}
+
+.big-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.header-description {
+  letter-spacing: 2px;
+}
+
+.header-description span {
+  font-weight: bold;
 }

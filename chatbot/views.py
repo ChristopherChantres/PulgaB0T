@@ -11,10 +11,11 @@ def home(request):
     # ------------ NLTK Model ------------#
     chatbot = chatbot_init()
     user_input = request.POST['user_field_input']
+    user_input = user_input.lower()
     response = chatbot.respond(user_input)
 
     if response == None:
-      response = ''
+      response = 'Remember I am still learning :)'
     #--------------------------------#
 
     # Calling the Model

@@ -32,7 +32,7 @@ pairs = [
   ['joke time', ['Why don\'t some couples go to the gym? Because some relationships don\'t work out!']],
   ['humor me', ['Why did the tomato turn red? Because it saw the salad dressing!']],
   ['tell a funny joke', ['Why don\'t sharks like fast food? Because they can\'t catch it!']],
-  ['I need a laugh', ['Why was the math book sad? Because it had too many problems!']],
+  ['i need a laugh', ['Why was the math book sad? Because it had too many problems!']],
   ['joke of the day', ['Why don\'t some cats play poker in the jungle? Too many cheetahs!']],
   ['make me smile', ['Why do we never trust stairs? They\'re always up to something!']],
   ['say a joke', ['Why did the bicycle fall over? Because it was two-tired!']],

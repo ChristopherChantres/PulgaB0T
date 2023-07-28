@@ -115,3 +115,7 @@ form {
   color: #043045;
   cursor: pointer;
 }
+
+.footer-author a {
+  color: #00ff64;
+}

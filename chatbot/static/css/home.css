@@ -13,6 +13,18 @@ body {
   color: var(--font-color);
 }
 
+main {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+}
+
 .big-container {
   display: flex;
   flex-direction: column;
@@ -22,12 +34,13 @@ body {
 
 .header-title {
   text-align: center;
-  font-size: 40px;
+  font-size: 80px;
   letter-spacing: 5px;
 }
 
 .header-description {
   letter-spacing: 2px;
+  font-size: 40px;
 }
 
 .header-description span {
@@ -41,27 +54,36 @@ hr {
 /* ----------------------- */
 
 .chat-container {
-  width: 300px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
   border-radius: 10px;
   background-color: #263358c2;
   padding: 15px;
   box-shadow: 0 10px 7px rgba(0, 0, 0, 0.47);
+  font-size: 30px;
 }
 
 .chat-container__messages {
-
+  width: 90%;
 }
 
 .chatbot {
   border: none;
   border-radius: 3px;
   background-color: #00ad44;
-  padding: 3px;
+  padding: 8px;
 }
 
 .chatbot-response {
-  padding-left: 5px;
+  padding-left: 10px;
   letter-spacing: .6px;
+}
+
+form {
+  width: 90%;
 }
 
 .user-input-container {
@@ -80,10 +102,11 @@ hr {
   background-color: #2e3e6bc2;
   color: white;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.47);
+  font-size: 30px;
 }
 
 .form-submit {
-  width: 40px;
+  width: 60px;
   background-color: #00ff64;
   border: none;
   border-radius: 5px;

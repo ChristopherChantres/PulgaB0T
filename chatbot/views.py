@@ -31,3 +31,16 @@ def home(request):
       'all_messages': all_messages,
     }
   return render(request, 'chatbot/home.html', context)
+
+
+def messages(request):
+  context = dict()
+  counter = 0
+
+  if request.method == 'GET':
+    all_messages = Message.objects.all()
+    context = {
+      'all_messages': all_messages,
+      'counter': counter
+    }
+  return render(request, 'chatbot/messages.html', context)

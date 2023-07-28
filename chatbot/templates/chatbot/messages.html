@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/messages.css' %}">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="container-title">Messages List</h1>
+      <p class="container-goHome"><a href="{% url 'home' %}" class="container-goHome-a">Go Home</a></p>
+      <table>
+        <tr>
+          <th>Message</th>
+          <th>Sent At</th>
+        </tr>
+        {% for message in all_messages %}
+          <tr>
+            <td>{{ forloop.counter0 }}. {{ message.message }}</td>
+            <td>{{ message.sent_at }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

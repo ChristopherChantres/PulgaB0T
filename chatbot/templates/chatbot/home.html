@@ -26,17 +26,10 @@
               <p><span class="chatbot">PulgaB0T:</span><span class="chatbot-response">{{ pulga_response }}</span></p>
             {% endif %}
           </div>
-  
-      
-          {% comment %} {% if user %}
-            {% for message in all_messages %}
-              <p>You: {{ message.message }} <small>{{ message.sent_at|time:"g:i" }}</small></p>
-            {% endfor %}
-          {% endif %} {% endcomment %}
           <form method='post'>
             {% csrf_token %}
             <label for="user_field_input" class="user-input-container">
-              <input type="text" placeholder="Send a message" name="user_field_input" class="form-input">
+              <input type="text" placeholder="Send a message" name="user_field_input" class="form-input" required>
               <button type="submit" class="form-submit">></button>
             </label>
           </form>

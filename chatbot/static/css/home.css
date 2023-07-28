@@ -88,7 +88,7 @@ form {
 
 .user-input-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .form-input {
@@ -114,6 +114,7 @@ form {
   font-weight: 500;
   color: #043045;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .footer-author a {

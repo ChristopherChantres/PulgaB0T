@@ -47,6 +47,27 @@ header {
   font-weight: bold;
 }
 
+.btn-goMessages {
+  margin-bottom: 40px;
+}
+
+.btn-goMessages-a {
+  font-size: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  padding: 10px;
+  color: var(--font-color);
+  letter-spacing: 2px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .2s all ease;
+}
+
+.btn-goMessages-a:hover {
+  background-color: rgb(60, 73, 93);
+}
+
 hr {
   color: #00ff64;
 }

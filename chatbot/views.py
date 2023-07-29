@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .natural_lang_model.pulga import chatbot_init
 from .models import Message
 from django.utils import timezone
+from django.http import JsonResponse
 
 
 def home(request):
@@ -44,3 +45,9 @@ def messages(request):
       'counter': counter
     }
   return render(request, 'chatbot/messages.html', context)
+
+
+def messages_api(request):
+  all_messages = Message.objects.all()
+
+  return JsonResponse(all_messages, safe=False)

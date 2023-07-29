@@ -2,8 +2,10 @@ from django.shortcuts import render
 from .natural_lang_model.pulga import chatbot_init
 from .models import Message
 from django.utils import timezone
-from django.http import JsonResponse
 
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from .serializers import MessageSerializer
 
 def home(request):
   context = dict()
@@ -47,7 +49,10 @@ def messages(request):
   return render(request, 'chatbot/messages.html', context)
 
 
+@api_view(['GET'])
 def messages_api(request):
-  all_messages = Message.objects.all()
+  if request.method == 'GET':
+    all_messages = Message.objects.all()
+    serializer = MessageSerializer(all_messages, many=True)
 
-  return JsonResponse(all_messages, safe=False)
+  return Response(serializer.data)
